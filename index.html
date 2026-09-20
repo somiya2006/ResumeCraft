@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeCraft | Professional Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="top-header">
+    <div class="brand">
+        <div class="brand-icon">RC</div>
+        <div>
+            <h1>ResumeCraft</h1>
+            <span>Professional Resume Builder</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#builder">Builder</a>
+        <a href="#preview">Preview</a>
+        <a href="#analyzer">Analyzer</a>
+        <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            ✦ Smart Resume Builder
+        </div>
+
+        <h2>
+            Build a Resume That
+            <span>Gets Noticed.</span>
+        </h2>
+
+        <p>
+            Create a clean, modern and professional resume with live preview,
+            multiple templates, profile photo, skill analysis and PDF printing.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#builder" class="btn btn-primary">
+                Start Building →
+            </a>
+
+            <a href="#analyzer" class="btn btn-secondary">
+                Analyze Skills
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="hero-card-top">
+            <div class="mini-avatar">SA</div>
+
+            <div>
+                <strong>Professional Resume</strong>
+                <small>Ready for opportunities</small>
+            </div>
+        </div>
+
+        <div class="mini-line big"></div>
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+        <div class="mini-line short"></div>
+
+        <div class="mini-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="mini-footer">
+            <span>✓ Skills</span>
+            <span>✓ Projects</span>
+            <span>✓ Experience</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat-card">
+        <strong>3</strong>
+        <span>Professional Templates</span>
+    </div>
+
+    <div class="stat-card">
+        <strong>100%</strong>
+        <span>Responsive Design</span>
+    </div>
+
+    <div class="stat-card">
+        <strong>PDF</strong>
+        <span>Print Ready</span>
+    </div>
+
+    <div class="stat-card">
+        <strong>Local</strong>
+        <span>Auto Save</span>
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN BUILDER ================= -->
+
+<main class="main-container" id="builder">
+
+    <!-- ================= FORM PANEL ================= -->
+
+    <section class="panel form-panel">
+
+        <div class="panel-header">
+
+            <div>
+                <span class="panel-label">BUILD</span>
+                <h2>Your Resume Details</h2>
+                <p>Fill your information and see the resume update instantly.</p>
+            </div>
+
+        </div>
+
+
+        <div class="form-body">
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="section-heading">
+                <div class="section-icon">👤</div>
+
+                <div>
+                    <h3>Personal Information</h3>
+                    <p>Basic information shown at the top of your resume.</p>
+                </div>
+            </div>
+
+
+            <div class="personal-layout">
+
+                <div class="photo-upload-area">
+
+                    <div class="photo-preview-box">
+
+                        <img id="photoPreview"
+                             src=""
+                             alt="Profile Photo">
+
+                        <div id="photoPlaceholder">
+                            <span>📷</span>
+                            <small>Profile Photo</small>
+                        </div>
+
+                    </div>
+
+                    <label for="profilePhoto" class="photo-upload-btn">
+                        Upload Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        id="profilePhoto"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="removePhotoBtn"
+                        class="remove-photo"
+                    >
+                        Remove
+                    </button>
+
+                    <small class="photo-help">
+                        JPG/PNG • Max 2MB
+                    </small>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Full Name *</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="e.g. Somiya Awasthi"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Professional Title *</label>
+                        <input
+                            type="text"
+                            id="jobTitle"
+                            placeholder="e.g. Computer Science Student"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="yourname@email.com"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Phone</label>
+                        <input
+                            type="text"
+                            id="phone"
+                            placeholder="+91 9876543210"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Location</label>
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Mumbai, Maharashtra"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>LinkedIn</label>
+                        <input
+                            type="text"
+                            id="linkedin"
+                            placeholder="linkedin.com/in/yourname"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>GitHub</label>
+                        <input
+                            type="text"
+                            id="github"
+                            placeholder="github.com/yourname"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Portfolio</label>
+                        <input
+                            type="text"
+                            id="portfolio"
+                            placeholder="yourportfolio.com"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="section-heading">
+                <div class="section-icon">✦</div>
+
+                <div>
+                    <h3>Professional Summary</h3>
+                    <p>Write a short introduction about yourself.</p>
+                </div>
+            </div>
+
+            <div class="field">
+                <textarea
+                    id="summary"
+                    rows="5"
+                    placeholder="Example: Motivated Computer Science student with strong interest in web development, software development and problem solving..."
+                ></textarea>
+            </div>
+
+
+            <!-- EDUCATION -->
+
+            <div class="section-heading section-heading-with-button">
+
+                <div class="section-heading-left">
+                    <div class="section-icon">🎓</div>
+
+                    <div>
+                        <h3>Education</h3>
+                        <p>Add your academic qualifications.</p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    id="addEducationBtn"
+                    class="small-add"
+                >
+                    + Add Education
+                </button>
+
+            </div>
+
+            <div id="educationContainer"></div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="section-heading section-heading-with-button">
+
+                <div class="section-heading-left">
+                    <div class="section-icon">💼</div>
+
+                    <div>
+                        <h3>Experience / Internship</h3>
+                        <p>Add internships, jobs or practical experience.</p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    id="addExperienceBtn"
+                    class="small-add"
+                >
+                    + Add Experience
+                </button>
+
+            </div>
+
+            <div id="experienceContainer"></div>
+
+
+            <!-- PROJECTS -->
+
+            <div class="section-heading section-heading-with-button">
+
+                <div class="section-heading-left">
+                    <div class="section-icon">🚀</div>
+
+                    <div>
+                        <h3>Projects</h3>
+                        <p>Showcase your important projects.</p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    id="addProjectBtn"
+                    class="small-add"
+                >
+                    + Add Project
+                </button>
+
+            </div>
+
+            <div id="projectsContainer"></div>
+
+
+            <!-- CERTIFICATIONS -->
+
+            <div class="section-heading section-heading-with-button">
+
+                <div class="section-heading-left">
+                    <div class="section-icon">🏆</div>
+
+                    <div>
+                        <h3>Certifications</h3>
+                        <p>Add certificates and courses.</p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    id="addCertificationBtn"
+                    class="small-add"
+                >
+                    + Add Certification
+                </button>
+
+            </div>
+
+            <div id="certificationsContainer"></div>
+
+
+            <!-- SKILLS -->
+
+            <div class="section-heading">
+                <div class="section-icon">⚡</div>
+
+                <div>
+                    <h3>Skills</h3>
+                    <p>Separate skills using commas.</p>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Technical Skills</label>
+
+                <input
+                    type="text"
+                    id="skills"
+                    placeholder="HTML, CSS, JavaScript, Java, Python, SQL, Git"
+                >
+            </div>
+
+
+            <!-- OTHER -->
+
+            <div class="section-heading">
+                <div class="section-icon">✨</div>
+
+                <div>
+                    <h3>Additional Information</h3>
+                    <p>Achievements, languages and interests.</p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="field full">
+                    <label>Achievements</label>
+
+                    <textarea
+                        id="achievements"
+                        rows="3"
+                        placeholder="Hackathon winner, college event organizer, academic achievement..."
+                    ></textarea>
+                </div>
+
+                <div class="field">
+                    <label>Languages</label>
+
+                    <input
+                        type="text"
+                        id="languages"
+                        placeholder="English, Hindi, Marathi"
+                    >
+                </div>
+
+                <div class="field">
+                    <label>Interests</label>
+
+                    <input
+                        type="text"
+                        id="interests"
+                        placeholder="Web Development, AI, Reading"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- FORM ACTIONS -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    id="saveBtn"
+                    class="btn btn-primary"
+                >
+                    💾 Save Resume
+                </button>
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="btn danger-btn"
+                >
+                    🗑 Clear
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PREVIEW PANEL ================= -->
+
+    <section class="panel preview-panel" id="preview">
+
+        <div class="preview-top">
+
+            <div>
+                <span class="panel-label">LIVE PREVIEW</span>
+                <h2>Your Professional Resume</h2>
+            </div>
+
+            <div class="preview-status">
+                <span class="status-dot"></span>
+                Live
+            </div>
+
+        </div>
+
+
+        <!-- TEMPLATE SELECTOR -->
+
+        <div class="template-bar">
+
+            <div class="template-title">
+                <strong>Choose Template</strong>
+                <span>Change your resume style</span>
+            </div>
+
+            <div class="template-options">
+
+                <button
+                    type="button"
+                    class="template-option active"
+                    data-template="classic"
+                >
+                    <span class="template-icon classic-icon"></span>
+                    Classic
+                </button>
+
+                <button
+                    type="button"
+                    class="template-option"
+                    data-template="modern"
+                >
+                    <span class="template-icon modern-icon"></span>
+                    Modern
+                </button>
+
+                <button
+                    type="button"
+                    class="template-option"
+                    data-template="minimal"
+                >
+                    <span class="template-icon minimal-icon"></span>
+                    Minimal
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRINT ACTIONS -->
+
+        <div class="print-actions">
+
+            <button
+                type="button"
+                id="downloadBtn"
+                class="btn btn-primary"
+            >
+                🖨 Print / Save PDF
+            </button>
+
+            <span>
+                Choose <b>Save as PDF</b> in the print window.
+            </span>
+
+        </div>
+
+
+        <!-- RESUME PAPER -->
+
+        <div class="resume-wrapper">
+
+            <article
+                id="resumePaper"
+                class="resume-paper classic"
+            >
+
+                <!-- RESUME HEADER -->
+
+                <div class="resume-header">
+
+                    <div class="resume-header-info">
+
+                        <h1 id="previewName">
+                            Your Name
+                        </h1>
+
+                        <h2 id="previewJob">
+                            Professional Title
+                        </h2>
+
+                        <div class="contact-line">
+
+                            <span id="previewEmail">
+                                email@example.com
+                            </span>
+
+                            <span id="previewPhone"></span>
+
+                            <span id="previewLocation"></span>
+
+                        </div>
+
+                        <div class="social-line">
+
+                            <span id="previewLinkedin"></span>
+                            <span id="previewGithub"></span>
+                            <span id="previewPortfolio"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="resume-photo-wrapper">
+
+                        <img
+                            id="previewPhoto"
+                            src=""
+                            alt="Profile"
+                        >
+
+                        <div
+                            id="previewPhotoPlaceholder"
+                            class="resume-photo-placeholder"
+                        >
+                            SA
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESUME BODY -->
+
+                <div class="resume-body">
+
+                    <!-- SUMMARY -->
+
+                    <section
+                        class="resume-section"
+                        id="summarySection"
+                    >
+
+                        <h3>PROFILE</h3>
+
+                        <p id="previewSummary">
+                            Your professional summary will appear here.
+                        </p>
+
+                    </section>
+
+
+                    <!-- EDUCATION -->
+
+                    <section
+                        class="resume-section"
+                        id="educationSection"
+                    >
+
+                        <h3>EDUCATION</h3>
+
+                        <div id="previewEducationList"></div>
+
+                    </section>
+
+
+                    <!-- EXPERIENCE -->
+
+                    <section
+                        class="resume-section"
+                        id="experienceSection"
+                    >
+
+                        <h3>EXPERIENCE</h3>
+
+                        <div id="previewExperienceList"></div>
+
+                    </section>
+
+
+                    <!-- PROJECTS -->
+
+                    <section
+                        class="resume-section"
+                        id="projectsSection"
+                    >
+
+                        <h3>PROJECTS</h3>
+
+                        <div id="previewProjectsList"></div>
+
+                    </section>
+
+
+                    <!-- CERTIFICATIONS -->
+
+                    <section
+                        class="resume-section"
+                        id="certificationsSection"
+                    >
+
+                        <h3>CERTIFICATIONS</h3>
+
+                        <div id="previewCertifications"></div>
+
+                    </section>
+
+
+                    <!-- SKILLS -->
+
+                    <section
+                        class="resume-section"
+                        id="skillsSection"
+                    >
+
+                        <h3>SKILLS</h3>
+
+                        <div
+                            id="previewSkills"
+                            class="skill-list"
+                        ></div>
+
+                    </section>
+
+
+                    <!-- ACHIEVEMENTS -->
+
+                    <section
+                        class="resume-section"
+                        id="achievementsSection"
+                    >
+
+                        <h3>ACHIEVEMENTS</h3>
+
+                        <p id="previewAchievements"></p>
+
+                    </section>
+
+
+                    <!-- LANGUAGES -->
+
+                    <section
+                        class="resume-section"
+                        id="languagesSection"
+                    >
+
+                        <h3>LANGUAGES</h3>
+
+                        <div
+                            id="previewLanguages"
+                            class="inline-list"
+                        ></div>
+
+                    </section>
+
+
+                    <!-- INTERESTS -->
+
+                    <section
+                        class="resume-section"
+                        id="interestsSection"
+                    >
+
+                        <h3>INTERESTS</h3>
+
+                        <div
+                            id="previewInterests"
+                            class="inline-list"
+                        ></div>
+
+                    </section>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESUME ANALYZER ================= -->
+
+    <section
+        class="panel analyzer-panel"
+        id="analyzer"
+    >
+
+        <div class="analyzer-header">
+
+            <div>
+
+                <span class="panel-label">
+                    SMART ANALYZER
+                </span>
+
+                <h2>Resume Skill Analyzer</h2>
+
+                <p>
+                    Select a target job role to compare your skills
+                    with commonly required skills.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="analyzer-grid">
+
+            <div class="analyzer-control">
+
+                <label for="jobRole">
+                    Target Job Role
+                </label>
+
+                <select id="jobRole">
+
+                    <option value="frontend">
+                        Frontend Developer
+                    </option>
+
+                    <option value="backend">
+                        Backend Developer
+                    </option>
+
+                    <option value="fullstack">
+                        Full Stack Developer
+                    </option>
+
+                    <option value="python">
+                        Python Developer
+                    </option>
+
+                    <option value="data">
+                        Data Analyst
+                    </option>
+
+                    <option value="software">
+                        Software Developer
+                    </option>
+
+                </select>
+
+                <button
+                    type="button"
+                    id="analyzeBtn"
+                    class="btn btn-primary"
+                >
+                    Analyze My Skills
+                </button>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-circle">
+
+                    <span id="score">
+                        0%
+                    </span>
+
+                </div>
+
+                <div>
+                    <h3 id="analysisTitle">
+                        Ready to Analyze
+                    </h3>
+
+                    <p id="analysisMessage">
+                        Add your skills and select a job role.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="analysis-results">
+
+            <div class="analysis-box">
+
+                <h3>✓ Matching Skills</h3>
+
+                <div
+                    id="matchingSkills"
+                    class="analysis-tags"
+                >
+                    <span class="empty-tag">
+                        No analysis yet
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="analysis-box">
+
+                <h3>＋ Skills to Consider</h3>
+
+                <div
+                    id="missingSkills"
+                    class="analysis-tags"
+                >
+                    <span class="empty-tag">
+                        No analysis yet
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        <div class="brand-icon">RC</div>
+
+        <div>
+            <strong>ResumeCraft</strong>
+            <span>Build. Improve. Get Noticed.</span>
+        </div>
+    </div>
+
+    <p>
+        Professional Resume Builder • Built with HTML, CSS & JavaScript
+    </p>
+
+</footer>
+
+
+<!-- ================= NOTIFICATION ================= -->
+
+<div
+    id="notification"
+    class="notification"
+>
+    <span id="notificationIcon">✓</span>
+    <span id="notificationText">Saved successfully</span>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
